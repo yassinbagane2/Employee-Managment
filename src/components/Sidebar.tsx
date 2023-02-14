@@ -12,7 +12,7 @@ const Sidebar: React.FC<Props> = ({ showSidebar }) => {
     <div
       className={
         showSidebar
-          ? "flex flex-col items-center pt-4 w-[22vw] bg-[#0f172a] text-white duration-50 ease-in"
+          ? "flex flex-col items-center pt-4 w-[20vw] bg-[#0f172a] text-white duration-50 ease-in"
           : "absolute -left-[900px] bg-[#0f172a]"
       }
     >

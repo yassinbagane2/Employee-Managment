@@ -7,4 +7,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.text-clip {
+  display: -webkit-box;
+  overflow-x: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

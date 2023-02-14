@@ -17,9 +17,10 @@ const TextInput: React.FC<Props> = ({
   value,
   placeholder,
   disabled,
+  className,
 }) => {
   return (
-    <div className="flex flex-col gap-1 mb-3">
+    <div className="mb-3 flex flex-col gap-1">
       <label className="capitalize" htmlFor={name}>
         {name}
       </label>
@@ -27,7 +28,7 @@ const TextInput: React.FC<Props> = ({
         type={type}
         name={name}
         value={value}
-        className="pl-2 py-2 border bg-gray-50 outline-none"
+        className={`border bg-gray-50 py-2 pl-2 outline-none ${className}`}
         placeholder={placeholder}
         onChange={onChange}
       />

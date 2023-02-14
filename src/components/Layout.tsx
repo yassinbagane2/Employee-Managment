@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
           setShowSidebar(!showSidebar);
         }}
       />
-      <div className="flex bg-gray-50 h-screen w-full">
+      <div className="flex h-screen w-full bg-gray-50">
         <Sidebar showSidebar={showSidebar} />
         <Outlet />
       </div>
