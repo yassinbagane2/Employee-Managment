@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import CollaboratorCard from "../components/CollaboratorCard";
-import SearchInput from "../components/SearchInput";
+import CollaboratorCard from "../../components/Collaborators/CollaboratorCard";
+import SearchInput from "../../components/UI/SearchInput";
 
 const Collaborators = () => {
   return (
@@ -21,9 +21,9 @@ const Collaborators = () => {
           </div>
         </div>
         <div className="flex flex-wrap gap-3">
-          <CollaboratorCard />
-          <CollaboratorCard />
-          <CollaboratorCard />
+          <CollaboratorCard id={1} />
+          <CollaboratorCard id={2} />
+          <CollaboratorCard id={3} />
         </div>
       </div>
     </div>

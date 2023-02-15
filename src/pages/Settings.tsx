@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../components/Button";
-import TextInput from "../components/TextInput";
+import Button from "../components/UI/Button";
+import TextInput from "../components/UI/TextInput";
 
 const Settings: React.FC = () => {
   const handleInputChange = (e: any) => {

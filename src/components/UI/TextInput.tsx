@@ -1,20 +1,11 @@
 import React from "react";
-
-interface Props {
-  type: string;
-  name: string;
-  value: string;
-  placeholder?: string;
-  disabled?: boolean;
-  className?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-const TextInput: React.FC<Props> = ({
+import textInputProps from "../../interfaces/TextInputProps";
+const TextInput: React.FC<textInputProps> = ({
   onChange,
   type,
   name,
   value,
+  label,
   placeholder,
   disabled,
   className,
@@ -22,12 +13,13 @@ const TextInput: React.FC<Props> = ({
   return (
     <div className="mb-3 flex flex-col gap-1">
       <label className="capitalize" htmlFor={name}>
-        {name}
+        {label || name}
       </label>
       <input
         type={type}
         name={name}
         value={value}
+        disabled={disabled || false}
         className={`border bg-gray-50 py-2 pl-2 outline-none ${className}`}
         placeholder={placeholder}
         onChange={onChange}

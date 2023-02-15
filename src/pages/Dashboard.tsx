@@ -1,10 +1,10 @@
-import Table from "../components/Table";
+import Table from "../components/Dashboard/Table";
 
 const Dashboard = () => {
   return (
     <div className="w-full p-2">
-      <div className="flex justify-center items-center flex-col mx-4 p-6 bg-white rounded-md shadow-sm">
-        <h2 className="text-blue-600 mb-2 text-xl">Recent Employees</h2>
+      <div className="mx-4 flex flex-col items-center justify-center rounded-md bg-white p-6 shadow-sm">
+        <h2 className="mb-2 text-xl text-blue-600">Recent Employees</h2>
         <Table />
       </div>
     </div>

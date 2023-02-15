@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
-import TextInput from "../components/TextInput";
+import Button from "../components/UI/Button";
+import TextInput from "../components/UI/TextInput";
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 const Login: React.FC = () => {
   const initialState = {
@@ -9,17 +9,17 @@ const Login: React.FC = () => {
     password: "",
   };
   const [values, setValues] = useState(initialState);
-  const handleChange = () => {};
+  const handleChange = (e: any) => {};
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="mx-3 bg-white rounded-md shadow-sm w-[720px] min-h-[520px] flex overflow-hidden">
-        <div className="w-2/4 bg-[url('/img/desktop.jpg')] bg-center bg-cover backdrop-sepia-0 relative">
-          <div className="text-white flex items-center justify-center flex-col absolute w-full h-full bg-black/80">
+    <div className="flex min-h-screen items-center justify-center bg-gray-50">
+      <div className="mx-3 flex min-h-[520px] w-[720px] rounded-md bg-white shadow-sm">
+        <div className="relative w-2/4 bg-[url('/img/desktop.jpg')] bg-cover bg-center backdrop-sepia-0">
+          <div className="absolute flex h-full w-full flex-col items-center justify-center bg-black/80 text-white">
             <h2 className="text-4xl font-medium">Satoripop</h2>
             <p>Shine clever</p>
           </div>
         </div>
-        <div className="w-2/4 flex flex-col justify-between p-4">
+        <div className="flex w-2/4 flex-col justify-between p-4">
           <h1 className="text-5xl font-thin">Login</h1>
           <form>
             <TextInput
@@ -51,15 +51,15 @@ const Login: React.FC = () => {
             </div>
             <Button>Submit</Button>
           </form>
-          <div className="flex justify-center">
-            <ul className="flex gap-4">
-              <li className="bg-gray-200 text-blue-700 rounded-full w-8 h-8 hover:scale-110 duration-200 flex items-center justify-center cursor-pointer">
+          <div>
+            <ul className="flex justify-center gap-2 p-2">
+              <li className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-blue-700 duration-200 hover:scale-110">
                 <FiFacebook />
               </li>
-              <li className="bg-gray-200 text-blue-500 rounded-full w-8 h-8 hover:scale-110 duration-200 flex items-center justify-center cursor-pointer">
+              <li className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-blue-500 duration-200 hover:scale-110">
                 <FiTwitter />
               </li>
-              <li className="bg-gray-200 text-pink-600 rounded-full w-8 h-8 hover:scale-110 duration-200 flex items-center justify-center cursor-pointer">
+              <li className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-pink-600 duration-200 hover:scale-110">
                 <FiInstagram />
               </li>
             </ul>
